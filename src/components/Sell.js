@@ -7,24 +7,22 @@ export const Sell = ({sell, purchase, tabsAll, content}) => {
   const changeSell = (e) => {
 
     tabsAll.forEach(tab => {
-  
-          //Recorrer cada content
-          content.forEach(c => {
-            c.classList.remove('tabs--active')
-          })
-          
 
-          const t = document.querySelector(tab.dataset.tabs);
-          t.classList.add('tabs--active');
+        //Recorrer cada content
+        content.forEach(c => {
+          c.classList.add('tabs--active')
+        })
 
-          
-          tab.classList.remove('border--active')
+        const t2 = document.querySelector(tab.dataset.tabs);
+        t2.classList.remove('tabs--active');
+
         //Recorrer cada tab
         tabsAll.forEach( e => {
-            e.classList.adde('border--active')
-            tab.classList.add('tabs--active')
+          e.classList.add('border--active')
         })
-  
+
+        tab.classList.remove('border--active')
+        
     });
     
   }

@@ -4,7 +4,7 @@ import convert from '../assets/vector.png';
 export const Purchase = ({purchase, sell, tabsAll, content}) => {
 
  //Botón para hacer la conversión
- const changePurchase = () => {
+ const changePurchase = (e) => {
 
     tabsAll.forEach(tab => {
   
@@ -12,7 +12,7 @@ export const Purchase = ({purchase, sell, tabsAll, content}) => {
           content.forEach(c => {
             c.classList.remove('tabs--active')
           })
-  
+
           const t = document.querySelector(tab.dataset.tabs);
           t.classList.add('tabs--active');
   
@@ -20,7 +20,9 @@ export const Purchase = ({purchase, sell, tabsAll, content}) => {
           tabsAll.forEach( e => {
             e.classList.remove('border--active')
           })
+          
           tab.classList.add('border--active')
+          
   
     });
 
