@@ -9,7 +9,7 @@
 Api de Rick and Morty: [https://exchangeratecs.herokuapp.com/api/rates](https://exchangeratecs.herokuapp.com/api/rates)
 
 ## Link de la página desplegada
-[https://test-habilidad.netlify.app/](hhttps://test-habilidad.netlify.app/)
+[https://test-habilidad2.netlify.app/](hhttps://test-habilidad2.netlify.app/)
 
 ## Herramientas que se utilizaron para el proyecto
 - Instalación de: npm install sass
