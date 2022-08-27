@@ -42,8 +42,6 @@ export const Purchase = ({purchase, sell, tabsAll, content}) => {
         document.getElementById('valueResult2').value = (inputValue / sell).toFixed(2);
     }
 
-    
-
  }
 
   return (

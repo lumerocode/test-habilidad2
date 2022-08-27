@@ -8,7 +8,6 @@ export const Sell = ({sell, purchase, tabsAll, content}) => {
 
     tabsAll.forEach(tab => {
   
-        
           //Recorrer cada content
           content.forEach(c => {
             c.classList.remove('tabs--active')
@@ -18,11 +17,13 @@ export const Sell = ({sell, purchase, tabsAll, content}) => {
           const t = document.querySelector(tab.dataset.tabs);
           t.classList.add('tabs--active');
 
-        //   //Recorrer cada tab
-        //   tabsAll.forEach( e => {
-        //     e.classList.remove('border--active')
-        //   })
-        //   tab.classList.add('border--active')
+          
+          tab.classList.remove('border--active')
+        //Recorrer cada tab
+        tabsAll.forEach( e => {
+            e.classList.adde('border--active')
+            tab.classList.add('tabs--active')
+        })
   
     });
     
