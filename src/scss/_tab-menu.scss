@@ -1,0 +1,23 @@
+.tabs__menu {
+    display: flex;
+    justify-content: center;
+    column-gap: 90px;
+    padding-top: 29px;
+    border: 1px solid #E7E7ED;
+    border-radius: 8px 8px 0px 0px;
+
+    div {
+        text-align: center;
+    }
+
+    .border--active {
+        border-bottom: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        text-align: center;
+    }
+
+    .tab__current {
+        font-weight: 500;
+    }
+
+}
