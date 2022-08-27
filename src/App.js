@@ -66,9 +66,15 @@ function App() {
           sell={sale_price}/>
           <div className='tabs__content'>
             <Purchase
-            purchase={purchase_price}/>
+            purchase={purchase_price}
+            sell={sale_price}
+            tabsAll={tabsAll}
+            content={content}/>
             <Sell
-            sell={sale_price}/>
+            sell={sale_price}
+            purchase={purchase_price}
+            tabsAll={tabsAll}
+            content={content}/>
           </div>
         </div>
       </section>
