@@ -3,6 +3,7 @@ import convert from '../assets/vector.png';
 
 export const Purchase = ({purchase, sell, tabsAll, content}) => {
 
+ //Botón para hacer la conversión
  const changePurchase = () => {
 
     tabsAll.forEach(tab => {
@@ -25,38 +26,45 @@ export const Purchase = ({purchase, sell, tabsAll, content}) => {
 
  }
 
-
+ //Tipo de cambio
  const handleInputChange = (e) => {
 
     const inputValue = parseFloat(document.querySelector('#valuePurchase').value);
-    const result1 = (inputValue / purchase).toFixed(2);
+
+    if(!(document.querySelector('#valuePurchase').value.trim())) {
+        document.getElementById('valueResult').value = 0;
+    }else{
+        const result1 = (inputValue * purchase).toFixed(2);
+
+        document.getElementById('valueResult').value = result1;
+
+        document.getElementById('valueSell').value = inputValue;
+        document.getElementById('valueResult2').value = (inputValue / sell).toFixed(2);
+    }
+
     
-    document.getElementById('valueResult').value = result1;
-    
-    document.getElementById('valueSell').value = inputValue;
-    document.getElementById('valueResult2').value = (inputValue * sell).toFixed(2);
 
  }
 
   return (
     <div data-content id='purchase' className='tabs__purchase tabs--active'>
         <div className='tabs__current'>
-            <p>Soles</p>
+            <p>Dólares</p>
             <div className='tabs__right'>                
                 <p>Envías</p>
                 <div>
-                    <span>S/.</span>
+                    <span>$</span>
                     <input id='valuePurchase' type='number' name='value'
                     onChange={handleInputChange}/>
                 </div>
             </div>
         </div>
         <div className='tabs__current'>
-            <p>Dólares</p>
+            <p>Soles</p>
             <div className='tabs__right'>                
                 <p>Recibes</p>
                 <div>
-                    <span>$</span>
+                    <span>S/.</span>
                     <input id='valueResult' type='text' readOnly/>
                 </div>
             </div>
